@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+	<title>Countries</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="icon" href="./images/country.png">
+</head>
+<body onload="getCountriesData()">
+	<div id="container">
+		<div id="content">
+			<div id="sectionOne">
+				<div id="countrySearch">
+					<label id="countryLabel">Country:</label>
+					<select id="country"></select>
+					<button type="button" id="getCountryData" onclick="getCountryData()">Search</button>
+				</div>
+				<div id="countryFlags">
+					<img id="countryFlag"/>
+				</div>
+			</div>
+			<div id="sectionTwo">
+				<div id="countryDetails">
+					<p id="capital">Capital:</p>
+					<p id="timezone">Timezone:</p>
+					<p id="language">Language:</p>
+					<p id="currency">Currency:</p>
+				</div>
+				<div id="bordersDetails">
+					<label id="bordersLabel">Borders:<ul id="borders"></ul></label>
+				</div>
+			</div>
+			<div id="regionalDetails">
+				<label id="regionalLabel">Regional:</label>
+				<table id="regional">
+					<thead>
+						<tr>
+							<th id="regionalAcronym">Acronym</th>
+							<th id="regionalName">Name</th>
+						</tr>
+					</thead>
+					<tbody id="tableBody">
+						<tr>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="map">
+				<label id="mapLabel">Map:</label>
+				<div id="googleMap"></div>
+			</div>
+		</div>
+	</div>
+<script src="js/index.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAay5uE0FjPBx88GBaibkIqgY2izlaWyo"></script>
+</body>
+</html>
